@@ -52,6 +52,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        cyber: {
+          DEFAULT: '#1A1F2C',
+          dark: '#121419',
+          muted: '#8E9196',
+          accent: '#403E43',
+          neon: '#00F0FF',
+          pink: {
+            DEFAULT: '#FF0077',
+            dark: '#D40066',
+            light: '#FF44A1',
+          },
+          purple: '#7928CA',
+          yellow: '#F5A623',
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +98,51 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-neon': {
+          '0%, 100%': { 
+            boxShadow: '0 0 5px rgba(0, 240, 255, 0.6), 0 0 15px rgba(0, 240, 255, 0.4), 0 0 25px rgba(0, 240, 255, 0.2)'
+          },
+          '50%': { 
+            boxShadow: '0 0 10px rgba(0, 240, 255, 0.9), 0 0 20px rgba(0, 240, 255, 0.6), 0 0 30px rgba(0, 240, 255, 0.3)'
+          },
+        },
+        'pulse-pink': {
+          '0%, 100%': { 
+            boxShadow: '0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 0, 119, 0.4), 0 0 25px rgba(255, 0, 119, 0.2)'
+          },
+          '50%': { 
+            boxShadow: '0 0 10px rgba(255, 0, 119, 0.9), 0 0 20px rgba(255, 0, 119, 0.6), 0 0 30px rgba(255, 0, 119, 0.3)'
+          },
+        },
+        'text-glitch': {
+          '0%, 100%': { transform: 'translate(0)' },
+          '10%': { transform: 'translate(-2px, 2px)' },
+          '20%': { transform: 'translate(2px, -2px)' },
+          '30%': { transform: 'translate(-2px, 2px)' },
+          '40%': { transform: 'translate(2px, -2px)' },
+          '50%': { transform: 'translate(-2px, 2px)' },
+          '60%': { transform: 'translate(2px, -2px)' },
+          '70%': { transform: 'translate(-2px, 2px)' },
+          '80%': { transform: 'translate(2px, -2px)' },
+          '90%': { transform: 'translate(-2px, 2px)' },
+        },
+        'slot-machine': {
+          '0%': { transform: 'translateY(0)' },
+          '20%': { transform: 'translateY(-500%)' },
+          '40%': { transform: 'translateY(-1000%)' },
+          '60%': { transform: 'translateY(-1500%)' },
+          '80%': { transform: 'translateY(-2000%)' },
+          '100%': { transform: 'translateY(-2500%)' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-neon': 'pulse-neon 2s infinite',
+        'pulse-pink': 'pulse-pink 2s infinite',
+        'text-glitch': 'text-glitch 0.3s ease-in-out',
+        'slot-machine': 'slot-machine 0.5s ease-out',
 			}
 		}
 	},

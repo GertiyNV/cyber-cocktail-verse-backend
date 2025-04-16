@@ -4,89 +4,84 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    /* Default dark cyberpunk theme */
+    --background: 228 24% 14%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 228 24% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 228 24% 14%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 228 24% 14%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 190 100% 42%;
+    --secondary-foreground: 228 24% 14%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 230 20% 20%;
+    --muted-foreground: 217 19% 72%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 330 65% 53%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 228 24% 20%;
+    --input: 228 24% 20%;
+    --ring: 190 95% 44%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 24% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 228 24% 14%;
+    --sidebar-accent: 330 65% 53%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 228 24% 18%;
+    --sidebar-ring: 190 95% 44%;
+  }
+
+  .pink-theme {
+    --background: 320 30% 10%;
+    --foreground: 320 100% 98%;
+
+    --card: 320 30% 8%;
+    --card-foreground: 320 100% 98%;
+
+    --popover: 320 30% 10%;
+    --popover-foreground: 320 100% 98%;
+
+    --primary: 330 100% 50%;
+    --primary-foreground: 320 30% 10%;
+
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 320 30% 10%;
+
+    --muted: 320 20% 20%;
+    --muted-foreground: 320 19% 72%;
+
+    --accent: 280 65% 53%;
+    --accent-foreground: 320 100% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 320 100% 98%;
+
+    --border: 320 30% 20%;
+    --input: 320 30% 20%;
+    --ring: 330 95% 55%;
+
+    --sidebar-background: 320 30% 8%;
+    --sidebar-foreground: 320 100% 98%;
+    --sidebar-primary: 330 100% 50%;
+    --sidebar-primary-foreground: 320 30% 10%;
+    --sidebar-accent: 280 65% 53%;
+    --sidebar-accent-foreground: 320 100% 98%;
+    --sidebar-border: 320 30% 18%;
+    --sidebar-ring: 330 95% 60%;
   }
 }
 
@@ -97,5 +92,120 @@
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(26, 31, 44, 0.6) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(64, 62, 67, 0.5) 0%, transparent 33%);
+    background-attachment: fixed;
+  }
+}
+
+@font-face {
+  font-family: 'Cyberpunk';
+  src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+}
+
+@layer utilities {
+  .neon-border {
+    @apply border border-cyber-neon shadow-[0_0_10px_rgba(0,240,255,0.7),0_0_20px_rgba(0,240,255,0.4)];
+  }
+  
+  .neon-border-pink {
+    @apply border border-cyber-pink shadow-[0_0_10px_rgba(255,0,119,0.7),0_0_20px_rgba(255,0,119,0.4)];
+  }
+  
+  .neon-text {
+    @apply text-cyber-neon drop-shadow-[0_0_8px_rgba(0,240,255,0.7)];
+  }
+  
+  .neon-text-pink {
+    @apply text-cyber-pink drop-shadow-[0_0_8px_rgba(255,0,119,0.7)];
+  }
+  
+  .cyberpunk-card {
+    @apply bg-cyber-dark/80 backdrop-blur-sm border border-cyber-neon/30 shadow-md;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyberpunk-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 240, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  .cyberpunk-card:hover::before {
+    left: 100%;
+  }
+  
+  .pink-theme .cyberpunk-card {
+    @apply border-cyber-pink/30;
+  }
+  
+  .pink-theme .cyberpunk-card::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 0, 119, 0.2),
+      transparent
+    );
+  }
+
+  .glitch-effect {
+    position: relative;
+  }
+  
+  .glitch-effect::before,
+  .glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  
+  .glitch-effect::before {
+    color: #00F0FF;
+    animation: glitch-effect 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    animation-delay: 0.1s;
+  }
+  
+  .glitch-effect::after {
+    color: #FF0077;
+    animation: glitch-effect 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes glitch-effect {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
   }
 }
