@@ -7,6 +7,11 @@ const https = require('https');
 const app = express();
 const port = process.env.PORT || 3001;
 
+// Базовый эндпоинт для healthcheck
+app.get('/', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
 // Создаем экземпляр axios с настройками для игнорирования SSL
 const axiosInstance = axios.create({
     httpsAgent: new https.Agent({
