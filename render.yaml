@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cyber-cocktail-verse-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: AUTH_KEY_PERS
+        sync: false 
