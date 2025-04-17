@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { DrinkSelection } from "@/components/DrinkSelection";
@@ -9,6 +8,7 @@ import { FeedbackForm } from "@/components/FeedbackForm";
 import { MoscowBars } from "@/components/MoscowBars";
 import { FridayTimer } from "@/components/FridayTimer";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import FloatingChat from "@/components/FloatingChat";
 
 const Index = () => {
   const [isPinkTheme, setIsPinkTheme] = useState(false);
@@ -76,6 +76,8 @@ const Index = () => {
       <FridayTimer 
         isPinkTheme={isPinkTheme} 
       />
+
+      <FloatingChat />
     </div>
   );
 };
